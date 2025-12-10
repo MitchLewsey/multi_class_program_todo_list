@@ -37,7 +37,7 @@ _Also design the interface of each class in more detail._
 
 ```python
 # File: lib/todo_list.py
-class TodoList:
+class ToDoList:
     def __init__(self):
         # Parameters:
         #   None
@@ -75,7 +75,7 @@ class TodoList:
 
 
 # File: lib/todo.py
-class Todo:
+class ToDo:
     # Public Properties:
     #   task: a string representing the task to be done
     #   complete: a boolean representing whether the task is complete
@@ -159,8 +159,7 @@ todo2 = ToDo("Mow the lawn")
 mylist.add(todo1)
 mylist.add(todo2)
 mylist.giveup()
-todo1.complete => True
-todo2.complete => True
+mylist.complete() => ["Wash the dishes", "Mow the lawn"]
 ```
 
 ## 4. Create Examples as Unit Tests
@@ -192,6 +191,12 @@ Marking the task as complete updates the complete property
 todo1 = ToDo("Wash the dishes")
 todo1.markcomplete()
 todo1.complete => True
+
+"""
+Given a todo with an empty task
+Raise an Exception error
+"""
+todo1 = ToDo("") => "Task must not be empty"
 
 # class ToDo_List
 
