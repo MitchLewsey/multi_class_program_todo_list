@@ -147,7 +147,7 @@ mylist.add(todo1)
 mylist.add(todo2)
 mylist.add(todo3)
 todo1.mark_complete()
-mylist.complete => ["Mow the lawn", "Feed the cat"]
+mylist.incomplete => ["Mow the lawn", "Feed the cat"]
 
 """
 Given a ToDo List and two added ToDos
@@ -158,8 +158,10 @@ todo1 = ToDo("Wash the dishes")
 todo2 = ToDo("Mow the lawn")
 mylist.add(todo1)
 mylist.add(todo2)
-mylist.giveup()
+mylist.give_up()
 mylist.complete() => ["Wash the dishes", "Mow the lawn"]
+todo1.complete == True
+todo2.complete == True
 ```
 
 ## 4. Create Examples as Unit Tests
